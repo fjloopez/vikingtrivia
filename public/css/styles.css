@@ -1,0 +1,695 @@
+@font-face {
+  font-family: Vikingn;
+  src: url(../fonts/vikingn.ttf);
+}
+
+* {
+  font-family: Vikingn;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.list_menu {
+  list-style: none;
+}
+
+body{
+
+  width: 100%;
+}
+
+
+.container {
+  padding: 40px;
+  overflow: hidden;
+  background-size: cover;
+
+}
+
+placeholder{
+  font-size: 1.4vw;
+}
+
+/*====
+Logo
+================*/
+.container_logo{
+  text-align: left;
+
+}
+
+.container_logo .img_logo {
+  width: 30%;
+}
+
+/*====
+Temas
+================*/
+.themeButton{
+  /*background-color: #988e88;*/
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  /*padding: 14px 20px;*/
+  margin: 8px 0;
+  text-align: center;
+  cursor: pointer;
+  width: 13%;
+  float: right;
+  font-size: 1.4vw;
+}
+
+/*====
+Menu
+================*/
+.container_menu{
+  /*background-color: #564b41;*/
+  background-color: transparent;
+  text-align: center;
+  background-size: cover;
+  width: 29%;
+  /*border: 2px solid #8e4300;*/
+  padding: 20px;
+  float: left;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.nav_menu .container_mm{
+  display: none;
+}
+
+.nav_menu .container_mh{
+  display: none;
+}
+
+.list_menu li,
+.list_menu li a{
+  /*font-style: none;*/
+  color: white;
+  font-size: 1.7vw;
+  line-height: 4vw;
+  text-decoration: none;
+}
+
+.list_menu h4{
+  font-weight: normal;
+  font-family: Vikingn;
+  font-size: 1.7vw;
+  line-height: 4vw;
+}
+
+.list_menu a h4:hover{
+  background-color: grey;
+}
+
+#userCount{
+  font-weight: bold;
+}
+
+
+/*====
+Imagen personaje
+================*/
+
+/* En Home */
+.container_play{
+  width: 69%;
+  float: right;
+}
+
+.container_img_main{
+  position: relative;
+}
+
+.container_play_button{
+  text-align: center;
+  width: 94.5%;
+  height: 15%;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.5s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.play_button_link{
+  font-size: 3vw;
+  text-decoration: none;
+  color: white;
+}
+
+.img_character {
+  width: 100%;
+}
+
+/* Animacion del boton play*/
+.container_img_main:hover .container_play_button{
+  opacity: 1;
+}
+
+
+/* En FAQ */
+.container_img_faq{
+  width: 29%;
+  float: left;
+}
+
+/* En Log In */
+.container_img_login{
+  width: 29%;
+  float: left;
+}
+
+/* En Contact */
+.container_img_contact{
+  width: 29%;
+  float: left;
+}
+
+/* En Policy */
+.container_img_privacy{
+  width: 29%;
+  float: left;
+}
+
+/*Ya logueado*/
+.user_img{
+  width: 25%;
+  border-radius: 50px;
+}
+
+.showUsername{
+  margin-top: 2vw;
+  text-align: justify;
+  float: right;
+  height: 5vw;
+  width: 13vw;
+}
+
+.usernameText{
+  text-align: justify;
+  font-size: 1.5vw;
+}
+
+
+/*====
+Slider
+================*/
+
+.slider {
+    clear: both;
+    /*background-color: #564b41;*/
+    background-color: transparent;
+}
+
+
+.slider #slider{
+    margin-bottom: 30px;
+    text-align: center;
+    width: 900px;
+    height: 600px;
+    overflow: hidden;
+}
+
+#slider {
+    margin-left: 22vw;
+    position: relative;
+    width: 900px;
+    height: 600px;
+    overflow: hidden;
+}
+
+#slider .container_slider {
+    position: absolute;
+    margin-top: 30px;
+    white-space: nowrap;
+    transition: all 1s;
+}
+
+#slider .container_slider img {
+    margin: 0;
+}
+
+.container_slider_buttons{
+  text-align: center;
+}
+
+.left {
+  margin-left: 50px;
+}
+
+.left, .right {
+  width: 25%;
+  margin-bottom: 30px;
+}
+
+
+
+
+
+/*====
+Footer
+================*/
+
+footer {
+  background-color: #555;
+  clear: both;
+  color: white;
+  padding: 1%;
+  font-size: 15px;
+}
+
+footer p{
+  font-family: none;
+}
+
+footer a{
+  font-family: none;
+  color: lightblue;
+}
+
+
+.containerFooter{
+  width: 100%;
+  height: 18px;
+  position: relative;
+}
+
+.footerLeft{
+  position: relative;
+  float: left;
+  width: 30%;
+  text-align: left;
+}
+
+.footerCenter{
+  float: left;
+  position: relative;
+  width: 30%;
+  text-align: center;
+}
+
+.footerRight{
+  float: right;
+  width: 40%;
+  position: relative;
+  text-align: right;
+}
+
+/*====
+FAQ
+================*/
+.container_faq{
+  background-color: #564b41;
+  background-size: cover;
+  color: white;
+  width: 69%;
+  float: right;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  font-size: 1.4vw;
+  line-height: 4vw;
+  border: 2px solid black;
+  padding: 30px;
+}
+
+
+.container_faq a{
+  /*font-style: none;*/
+  color: white;
+  font-size: 1.4vw;
+  line-height: 4vw;
+  text-decoration: none;
+}
+
+
+.container_faq a h3:hover{
+  background-color: grey;
+}
+
+.container_faq div {
+    display: none;
+}
+
+.container_faq div p{
+  padding-left: 5%;
+}
+
+.container_faq div:target {
+    display: block;
+}
+
+
+/*====
+Log In
+================*/
+
+
+.container_login{
+  background-color: #564b41;
+  background-size: cover;
+  color: white;
+  width: 69%;
+  float: right;
+  margin-top: 15px;
+  margin-bottom: 150px;
+  line-height: 4vw;
+  border: 2px solid black;
+  padding: 30px;
+  font-size: 1.4vw;
+}
+
+.container_login input, .container_login button{
+  font-size: 1.4vw;
+}
+
+
+input[type=text], input[type=password], input[type=email], input[type=date], input[type=username]  {
+    width: 60%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #c2540a;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.buttonRegistro, .buttonLogin, .buttonLogout{
+  width: 60%;
+  margin-left: 18%;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.container_form {
+    padding: 16px;
+}
+
+.container_form2{
+  background-color:#f1f1f1
+}
+
+span.psw, span.rememberMe {
+    float: right;
+    padding-top: 16px;
+}
+
+.container_form2 a{
+  color: lightblue;
+}
+
+/*====
+Contacto y Politica
+================*/
+
+.container_contact, .container_privacy{
+  background-color: #564b41;
+  background-size: cover;
+  color: white;
+  width: 69%;
+  float: right;
+  margin-top: 15px;
+  margin-bottom: 150px;
+  line-height: 4vw;
+  border: 2px solid black;
+  padding: 30px;
+  font-size: 1.4vw;
+}
+
+.container_contact a{
+  color: lightblue;
+}
+
+/*====
+Forget password
+================*/
+
+.container_forget_psw{
+  background-color: #564b41;
+  background-size: cover;
+  color: white;
+  width: 69%;
+  float: right;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  line-height: 4vw;
+  border: 2px solid black;
+  padding: 30px;
+  font-size: 1.4vw;
+}
+
+.container_forget_psw input, .container_forget_psw button{
+  font-size: 1.4vw;
+}
+
+
+/*====
+Register
+================*/
+
+.container_register{
+  background-color: #564b41;
+  background-size: cover;
+  color: white;
+  width: 69%;
+  float: right;
+  margin-top: 15px;
+  margin-bottom: 30px;
+  line-height: 4vw;
+  border: 2px solid black;
+  padding: 30px;
+  font-size: 1.4vw;
+}
+
+.container_register input{
+  font-size: 1.4vw;
+}
+
+.containerAvatar{
+  width: 50%;
+  float: left;
+  margin: 3%;
+  margin-left: 7%;
+  text-align: left;
+  border: 1px;
+  padding: 1%;
+}
+
+/*====
+Register errors
+================*/
+
+.alert {
+  background-color: red;
+  position: relative;
+  top: 0;
+  z-index: 1000;
+}
+
+/*====
+Profile
+================*/
+
+.profile {
+    text-align: center;
+}
+
+
+@media only screen and (max-width : 800px) {
+  footer{
+    display: none;
+  }
+}
+
+/*=============================================================
+Mobile
+==============================================================*/
+
+@media only screen and (max-width : 480px) {
+  .container {
+    padding: 5px;
+  }
+
+  .container_menu {
+    width: 100%;
+    margin-top: 0px;
+    background-color: transparent;
+    font-size: 3vw;
+  }
+
+  .container_desplegable .container_menu_list {
+    clear: both;
+    display: none;
+  }
+
+  .container_desplegable div:target {
+    display: block;
+  }
+
+  .list_menu li a {
+    font-size: 4.5vw;
+    line-height: 15vw;
+  }
+
+  .nav_menu .container_mm {
+    width: 20%;
+    display: block;
+    float: left;
+  }
+
+  .nav_menu .container_mh {
+    width: 49%;
+    display: block;
+    float: left;
+    padding-left: 25%;
+    padding-top: 5px;
+
+  }
+
+  .nav_menu .container_mh div {
+    width: 35px;
+    height: 6px;
+    background-color: #e9d401;
+    margin: 6px 0;
+    border: 1px solid #8e4300;
+  }
+
+  .img_logo_mm {
+    margin-top: 7px;
+    width: 50px;
+  }
+
+  .container_play {
+    width: 100%;
+    text-align: center;
+  }
+
+  .container_play_button {
+    opacity: 1;
+    position: relative;
+    width: 100%;
+    margin-bottom: 11px;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+
+  .play_button {
+    border: 1px #e9d401 solid;
+    font-size: 5vw;
+  }
+
+  .img_logo {
+    display: none;
+  }
+
+
+
+  .slider {
+    margin-bottom: 0px;
+  }
+
+  .container_faq {
+    width: 100%;
+  }
+
+  .container_faq a h3 {
+    font-size: 3vw;
+  }
+
+  .container_faq div {
+    display: block;
+  }
+
+  .container_faq div p {
+    font-size: 2.5vw;
+    line-height: 4vw;
+  }
+
+  .container_img_faq {
+    width: 100%;
+  }
+
+  .container_contact, .container_privacy {
+    width: 100%;
+  }
+
+  .container_contact h3, .container_privacy h3 {
+    font-size: 3vw;
+    line-height: 4vw;
+  }
+
+  .container_contact div, .container_privacy div {
+    display: block;
+  }
+
+  .container_contact p, .container_privacy p, .container_contact a {
+    font-size: 2.5vw;
+    line-height: 8vw;
+  }
+
+  .container_img_contact {
+    width: 100%;
+  }
+
+  .container_img_privacy {
+    width: 100%;
+  }
+
+  .container_login {
+    width: 100%;
+  }
+
+  .container_img_login {
+    width: 100%;
+  }
+
+  .container_login, .container_login button, input {
+    font-size: 3vw;
+
+  }
+
+  .container_register {
+    width: 100%;
+  }
+
+  .container_register, .container_register button, input {
+    font-size: 3vw;
+
+  }
+
+  .container_register {
+    width: 100%;
+    font-size: 3vw;
+  }
+
+  .container_register input {
+    font-size: 2.5vw;
+  }
+
+  input[type=text], input[type=password], input[type=email], input[type=date], input[type=username] {
+    width: 100%;
+
+  }
+
+  /*Ya logueado*/
+  .user_img {
+    width: 60px;
+    float: right;
+    margin-top: 10px;
+  }
+}
