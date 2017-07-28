@@ -1,4 +1,4 @@
-<?php include 'head.php' ?>
+
 <body>
 	<div class='container'> <!-- abre container principal-->
 
