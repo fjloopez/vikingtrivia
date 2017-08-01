@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+/*===================
+========ADMIN======== 
+=====================*/
+
+Route::get('admin/preguntas', "QuestionsController@show" );
