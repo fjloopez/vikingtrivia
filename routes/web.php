@@ -20,4 +20,9 @@ Route::get('/', function () {
 ========ADMIN======== 
 =====================*/
 
+/*==================
+====FORM ADMIN======
+====================*/
+
+Route::match(['get', 'post'], 'Admin/createAdmin', "Admin/AdminController@createAdmin");
 Route::get('admin/preguntas', "QuestionsController@show" );
