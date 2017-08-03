@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Admin extends Model
+class Question extends Model
 {
 
     protected $fillable = ['id', 'text', 'created_at', 'updated_at', 'category_id', 'user_id'];
