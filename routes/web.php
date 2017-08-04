@@ -55,6 +55,9 @@ Route::get('categoria/{id}', 'CategoriaController@show');
 
 
 //, profile ( y aca adentro edit profile y my questions(y aca adentro edit y add) y edit avatar) 
+
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class FaqsController extends Controller
 {
     public function faqs(){
-    	return view('faqs');
+    	return view('front.faqs.index');
     }
 }
