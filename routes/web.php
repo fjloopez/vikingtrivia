@@ -26,3 +26,13 @@ Route::get('/', function () {
 
 Route::match(['get', 'post'], 'Admin/createAdmin', "Admin/AdminController@createAdmin");
 Route::get('admin/preguntas', "QuestionsController@show" );
+
+
+
+/*===================
+========FRONT========
+=====================*/
+
+Route::get('vikingtrivia', function(){
+   return view('/front/app');
+});
