@@ -15,7 +15,7 @@ class QuestionController extends Controller
 
     public function index()
     {
-    	$questions = Question::paginate(5);
+    	$questions = Question::paginate(5);								//----------seguir acá
     	return view('admin.peliculas.index', compact('movies'));
     }
 
