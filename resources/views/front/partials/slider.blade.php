@@ -13,3 +13,5 @@
         <button type="button" class="right" onclick="plusDivs(1)">&#10095;</button>
     </div>
 </div>
+
+<script type="text/javascript" src="/js/slider.js"></script>

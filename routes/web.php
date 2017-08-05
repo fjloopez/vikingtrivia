@@ -32,16 +32,16 @@ Route::get('admin/preguntas', "QuestionsController@show" );
 =====================*/
 
 Route::get('vikingtrivia', function(){
-   return view('/front/app');
+   return view('/front/main/index');
 });
 
-Route::get('vikingtrivia', 'HomeController@index');
+Route::get('vikingtrivia/home', 'HomeController@index');
 
-Route::get('vikingtrivia', 'LogoutController@logout');
+Route::get('vikingtrivia/logout', 'LogoutController@logout');
 
-Route::get('vikingtrivia', 'FaqsController@faqs'); 
+Route::get('vikingtrivia/faqs', 'FaqsController@faqs');
 
-Route::get('vikingtrivia', 'ProfileController@profile'); 
+Route::get('vikingtrivia/profile', 'ProfileController@profile');
 
 
 

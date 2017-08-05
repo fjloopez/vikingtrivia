@@ -9,4 +9,4 @@
 <script src="/plugins/jquery.validate.js"></script>
 
 <!-- Custom Scripts -->
-<script type="text/javascript" src="/js/custom.js"></script>
+<script type="text/javascript" src="/js/theme.js"></script>

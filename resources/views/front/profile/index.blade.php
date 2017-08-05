@@ -1,33 +1,9 @@
-<div class='container'> <!-- abre container principal-->
+@extends('front.app')
 
-	<div class="container_logo">
-		<a href="main.php"><img class="img_logo" src="..\img\LogoVA.png" alt="Logo del juego"></a>
-	</div>
-
-	<div class="container_menu"><!-- abre container imagen -->
-		<?php include 'menu.php'; ?>
-	</div><!-- cierra container menu -->
-
-	<?php if (isset($_SESSION['errors_register'])): ?>	<!-- abre el chequeo de errores -->
-		<div class="alert">
-			<ul>
-			<?php foreach((array)$_SESSION['errors_register'] as $error): ?>
-					<!-- sin el "array" tiraba error de argumento invalido en el foreach -->
-				<li><?php echo $error; ?></li>
-			<?php endforeach; ?>
-			<?php
-				$nameValue = $_SESSION['name'];
-				$surnameValue = $_SESSION['surname'];
-				$usernameValue = $_SESSION['username'];
-				$emailValue = $_SESSION['email'];
-				$birth_date = $_SESSION['birth_date'];
-				$gender = $_SESSION['gender'];
-			?>
-			</ul>
-		</div>
-	<?php endif; ?>		<!-- cierra el chequeo de errores -->
+@section('title', "Perfil")
 
 
+@section('content')
 	<div class="container_register"> <!-- abre container register -->
 
 		<h1 class="profile">Perfil</h1>
@@ -71,10 +47,4 @@
 			</section>
 		</article>
 	</div><!-- cierra container imagen -->
-
-
-	<div class="container_footer">
-		<?php include "footer.php" ?>
-	</div>
-
-</div> <!-- cierra container principal-->
+@endsection

@@ -1,14 +1,9 @@
-<div class='container'> <!-- abre container principal-->
+@extends('front.app')
 
-	<div class="container_logo">
-		<a href="main.php"><img class="img_logo" src="..\img\LogoVA.png" alt="Logo del juego"></a>
-	</div>
-
-	<div class="container_menu"><!-- abre container imagen -->
-		<?php include 'menu.php'; ?>
-	</div><!-- cierra container menu -->
+@section('title', "Politicas-de-privacidad")
 
 
+@section('content')
 	<div class="container_privacy"> <!-- abre container Politica -->
 
 		<p>
@@ -27,21 +22,13 @@
 
 	</div><!-- cierra container Politica -->
 
-
-
 	<div class="container_img_privacy"> <!-- abre container imagen -->
 		<article>
 			<section>
-				<img class="img_character" src="..\img\Personajes.png" alt="Main character">
+				<img class="img_character" src="/images/Personajes.png" alt="Main character">
 			</section>
 		</article>
 	</div><!-- cierra container imagen -->
-
-
-	<div class="container_footer">
-		<?php include "footer.php" ?>
-	</div>
-
-</div> <!-- cierra container principal-->
+@endsection
 
 
