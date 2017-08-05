@@ -1,36 +1,20 @@
-<?php session_start(); ?>
-<?php
-//    require_once 'class/MySQLDB.php';
-//    require_once 'class/JSONDB.php';
-//    require_once 'class/DBFactory.php';
-//
-//    DBFactory::$db_type = 'MySQLDB';
+<!-- Special characters Meta -->
+<meta charset="utf-8">
 
-	if (isset($_SESSION['rememberMe'])){
-	setcookie("rememberMe",$_SESSION['username'],time()+99999);
-	}
+<!-- Mobile Meta -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+<!-- W3School CSS for buttons -->
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-	if(!isset($_SESSION["theme"])){
-		$tema = "../css/stylesInside.css";
-	} else{
-		if($_SESSION["theme"] === "inside"){
-			$tema = '../css/stylesInside.css';
-		} else{
-			$tema = '../css/stylesOutside.css';
-		}
-	}
+<!-- Favicon -->
+<link rel="shortcut icon" href="images/favicon.ico">
 
-?>
+<!-- Bootstrap core CSS -->
+<link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
 
-<!DOCTYPE html>
-<html>
-<head>
-	<title>Viking Adventures</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<link rel="stylesheet" href="../css/styles.css">
-	<link rel="stylesheet" href="<?php echo $tema; ?>" class="estilos">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-	
-</head>
+<!-- The Project's core CSS file -->
+<link href="/css/styles.css" rel="stylesheet" >
+<link href="/css/stylesInside.css" rel="stylesheet" >
+<link rel="stylesheet" href="#" class="estilos">
+
