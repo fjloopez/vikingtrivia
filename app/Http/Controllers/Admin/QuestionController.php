@@ -15,32 +15,27 @@ class QuestionController extends Controller
 
     public function index()
     {
-    	$questions = Question::paginate(5);								//----------seguir acá
-    	return view('admin.peliculas.index', compact('movies'));
+    	$questions = Question::paginate(5);								//----------seguir acá con las vistas en carpeta admin
+    	return view('admin.questions.index', compact('questions'));
     }
 
     public function create()
     {
-    	return view('admin.peliculas.create');
+    	return view('admin.questions.create');
     }
 
     public function store()
     {
-    	//crear la peli
-    	$movie = Movie::create(request()->all());
+    	//crear la pregunta
+    	$question = Question::create(request()->all());
 
-    	//guardar la imagen
-    	$nombre = str_slug($movie->title) . '.' .request()->banner->extension();
-    	request()->banner->storeAs('peliculas', $nombre);
-
-    	//asociar la imagen con la peli
-    	$movie->banner = $nombre;
+    	//guardar la pregunta
     	$movie->save();
     }
 
     public function show($id)
     {
-        $movie = Movie::find($id);
-        return view('admin.peliculas.show', compact('movie'));
+        $quesition = Question::find($id);
+        return view('admin.questions.show', compact('question'));
     }
 }
