@@ -215,7 +215,7 @@ Slider
 }
 
 #slider {
-    margin-left: 22vw;
+    margin-left: 15%;
     position: relative;
     width: 900px;
     height: 600px;
@@ -238,7 +238,7 @@ Slider
 }
 
 .left {
-  margin-left: 50px;
+  /*margin-left: 50px;*/
 }
 
 .left, .right {
