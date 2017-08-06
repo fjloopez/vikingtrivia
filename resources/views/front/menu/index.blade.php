@@ -2,7 +2,7 @@
 	<nav class="nav_menu">
 		<!-- mm = menu mobile -->
 		<div class="container_mm">
-			<a href="main.php"><img class="img_logo_mm" src="/images/logoV.png" alt="Logo del juego"></a>
+			<a href="/vikingtrivia"><img class="img_logo_mm" src="/images/logoV.png" alt="Logo del juego"></a>
 		</div>
 
 		<!-- marca del usuario -->

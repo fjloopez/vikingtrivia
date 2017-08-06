@@ -20,7 +20,7 @@
                 <button id="theme" class="themeButton">THEME</button>
             </form>
             <div class="container_logo"> <!-- abre container del logo -->
-                <a href="{{ asset("/front/main/index") }}"><img class="img_logo" src="{{ asset("/images/LogoVT.png") }}" alt="Logo del juego"></a>
+                <a href="/vikingtrivia"><img class="img_logo" src="{{ asset("/images/LogoVT.png") }}" alt="Logo del juego"></a>
             </div> <!-- cierra container del logo -->
 
             <div class="container_menu"> <!-- abre container menu -->

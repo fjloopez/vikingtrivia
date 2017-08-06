@@ -41,6 +41,8 @@ Route::get('vikingtrivia/faqs', 'FaqsController@faqs');
 
 Route::get('vikingtrivia/profile', 'ProfileController@profile');
 
+Route::get('vikingtrivia/play', 'GameController@show');
+
 
 
 
