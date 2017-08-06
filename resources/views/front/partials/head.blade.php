@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 <!-- Favicon -->
-<link rel="shortcut icon" href="images/favicon.ico">
+<link rel="shortcut icon" href="/images/favicon.ico">
 
 <!-- Bootstrap core CSS -->
 <link href="/bootstrap/css/bootstrap.css" rel="stylesheet">
