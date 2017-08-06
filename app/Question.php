@@ -12,9 +12,9 @@ class Question extends Model
     //protected $guarded = ['id', 'created_at', 'updated_at'];
 
 
-    public function questions()
+    public function answers()
     {
-    	return $this->hasMany('App\Answers');
+    	return $this->hasMany('App\Answer');
     }
 
     public function category()

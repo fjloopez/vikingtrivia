@@ -17,11 +17,11 @@ Route::get('/', function () {
 
 
 /*===================
-========ADMIN======== 
+========ADMIN========
 =====================*/
 
-Route::get('admin/preguntas', 'QuestionsController@show' );
-Route::get('admin/categoria', 'CategoryController@show');
+Route::get('admin/preguntas', 'Admin\QuestionsController@index' );
+Route::get('admin/categoria', 'Admin\CategoryController@show');
 
 
 

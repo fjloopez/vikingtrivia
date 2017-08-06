@@ -5,12 +5,11 @@ namespace App\Http\Controllers\Admin;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 
-class QuestionController extends Controller
+class QuestionsController extends Controller
 {
     public function __construct()
     {
-        //$this->middleware('auth');
-        $this->middleware('MostriWare');
+        $this->middleware('auth');
     }
 
     public function index()
