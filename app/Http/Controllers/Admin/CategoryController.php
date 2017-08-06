@@ -11,6 +11,6 @@ class CategoryController extends Controller
 	{
 		$category = Category::find($id);
         $questions = Question::find($id);
-        return view('front.categories.show', compact('questions', 'category'));
+        return view('front.main.index', compact('questions', 'category'));
     }
-}
+};

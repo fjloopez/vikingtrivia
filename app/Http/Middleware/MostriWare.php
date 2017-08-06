@@ -14,7 +14,10 @@ class MostriWare
      * @return mixed
      */
     public function handle($request, Closure $next)
-    {
+     {
+        if ( !is_object($request->user()) || $request->user()->name != 'MostriWare') {
+            return redirect('/');
+        }
         return $next($request);
     }
 }
