@@ -15,6 +15,12 @@
 
 <!-- The Project's core CSS file -->
 <link href="/css/styles.css" rel="stylesheet" >
-<link href="/css/stylesInside.css" rel="stylesheet" >
-<link rel="stylesheet" href="#" class="estilos">
+{{--@if (session)--}}
+
+
+{{--@php--}}
+    {{--$class = ($session->has('theme')) ? $session('theme') : 'inside';--}}
+{{--@endphp--}}
+<link href="/css/stylesInside.css" rel="stylesheet" class="estilos" id="themeInside">
+{{--<link href="/css/stylesOutside.css" rel="stylesheet" class="estilos" id="themeOutside">--}}
 

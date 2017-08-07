@@ -14,11 +14,11 @@ function countUsers() {
         var xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
     }
     xmlhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             document.getElementById("userCount").innerHTML = this.responseText;
         }
     };
-    xmlhttp.open("GET", "controllers/user.controller.php?q", true);
+    xmlhttp.open("GET", "count-users", true);
     xmlhttp.send();
 }
 //# sourceMappingURL=countUsers.js.map

@@ -20,8 +20,8 @@ Route::get('/', function () {
 ========ADMIN========
 =====================*/
 
-Route::get('admin/preguntas', 'Admin\QuestionsController@index' );
-Route::get('admin/categoria', 'Admin\CategoryController@show');
+Route::get('admin/preguntas', 'admin\QuestionsController@index' );
+Route::get('admin/categoria', 'admin\CategoryController@show');
 
 
 

@@ -11,10 +11,10 @@ window.onload = function () {
         isClicked == true ? estilos.href = "../css/stylesOutside.css" : estilos.href = "../css/stylesInside.css";
         if (window.XMLHttpRequest) {
             // code for IE7+, Firefox, Chrome, Opera, Safari
-            xmlhttp = new XMLHttpRequest();
+            var xmlhttp = new XMLHttpRequest();
         } else {
             // code for IE6, IE5
-            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+            var xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
         if (this.id === "inside") {
             this.id = "outside";
@@ -23,11 +23,11 @@ window.onload = function () {
         }
         console.log(this.id);
         xmlhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status == 200) {
+            if (this.readyState === 4 && this.status === 200) {
                 document.querySelector(".themeButton").innerHTML = JSON.parse(this.responseText);
             }
         };
-        xmlhttp.open("GET", "controllers/theme.controller.php?q=" + this.id, true);
+        xmlhttp.open("GET", "set-theme?q=" + this.id, true);
         xmlhttp.send();
     };
 };

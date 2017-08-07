@@ -26,4 +26,9 @@ class Question extends Model
     	return $this->belongsTo('App\Category');
     }
 
+
+    public function getId(){
+        return $this->id;
+    }
+
 }
