@@ -6,7 +6,7 @@
 		</div>
 
 		<!-- marca del usuario -->
-		@if(true)
+		@if(!Auth::guest())
 			<div class="container_user">
 				<a href="#"><img class="user_img" src="{{ asset('/images/avatars/defaultAvatar.png') }}" alt="Avatar del usuario"></a> <!-- profile.php -->
 					<div class="showUsername">
