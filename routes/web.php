@@ -35,15 +35,13 @@ Route::get('vikingtrivia', function(){
 
 Route::get('vikingtrivia/home', 'HomeController@index');
 
-Route::get('vikingtrivia/logout', 'LogoutController@logout');
+Route::get('vikingtrivia/logout', 'LogoutController@getLogout');
 
 Route::get('vikingtrivia/faqs', 'FaqsController@faqs');
 
 Route::get('vikingtrivia/profile', 'ProfileController@profile');
 
 Route::get('vikingtrivia/play', 'GameController@show');
-
-Route::get('vikingtrivia/logout', 'LogoutController@show');
 
 
 

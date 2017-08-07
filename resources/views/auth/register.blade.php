@@ -38,20 +38,6 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('username') ? ' has-error' : '' }}">
-                            <label for="username" class="col-md-4 control-label">username</label>
-
-                            <div class="col-md-6">
-                                <input id="name" type="text" class="form-control" name="username" value="{{ old('name') }}" required autofocus>
-
-                                @if ($errors->has('username'))
-                                    <span class="help-block">
-                                        <strong>{{ $errors->first('username') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
@@ -104,21 +90,18 @@
 
                         <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
                             <label for="gender" class="col-md-4 control-label">Gender</label>
-
-                        <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
-                            <label for="gender" class="">Male</label>
-                            <input id="gender" type="radio" class="" name="gender" value="{{ old('gender') }}" required autofocus>
-                            <br>
-
-                        <div class="{{ $errors->has('gender') ? ' has-error' : '' }}">
-                        <label for="gender" class="">Female</label>
-                        <input id="gender" type="radio" class="" name="gender" value="{{ old('gender') }}" required autofocus>
-                        <br>
-
-                        <div class="{{ $errors->has('gender') ? ' has-error' : '' }}">
-                        <label for="gender" class="">Prefer not say it</label>
-                        <input id="gender" type="radio" class="" name="gender" value="{{ old('gender') }}" required autofocus>
-                        <br>
+                            <div class="col-md-8">
+                                <label class="checkbox-inline">
+                                    <input type="radio" name="gender" value="{{ old('gender') }}" required> Male
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="radio" name="gender" value="{{ old('gender') }}" required> Female
+                                </label>
+                                <label class="checkbox-inline">
+                                    <input type="radio" name="gender" value="{{ old('gender') }}" required> Prefer not say it
+                                </label>
+                            </div>
+                        </div>
 
                         <div class="{{ $errors->has('gender') ? ' has-error' : '' }}">
                             @if ($errors->has('gender'))
