@@ -3,7 +3,7 @@
 <!--[if gt IE 9]> <html lang="en" class="ie"> <![endif]-->
 <!--[if !IE]><!-->
 <html lang="es">
-    <!--<![endif]-->
+
 
     <head>
         <meta charset="utf-8">

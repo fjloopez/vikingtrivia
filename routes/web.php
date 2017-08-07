@@ -43,6 +43,16 @@ Route::get('vikingtrivia/profile', 'ProfileController@profile');
 
 Route::get('vikingtrivia/play', 'GameController@show');
 
+Route::get('vikingtrivia/logout', 'LogoutController@show');
+
+
+
+
+/*===================
+========JS========
+=====================*/
+Route::get('set-theme', 'ThemeController@setTheme');
+Route::get('count-users', 'UserController@setTheme');
 
 
 
