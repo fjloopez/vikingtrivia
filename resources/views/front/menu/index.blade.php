@@ -6,7 +6,7 @@
 		</div>
 
 		<!-- marca del usuario -->
-		@if(false)
+		@if(true)
 			<div class="container_user">
 				<a href="#"><img class="user_img" src="{{ asset("/images/avatars/defaultAvatar.png") }}" alt="Avatar del usuario"></a> <!-- profile.php -->
 					<div class="showUsername">
@@ -19,10 +19,10 @@
 		<div class="container_desplegable">
 
 			@include("front.menu.hamburger-menu")
-			@if(false)
-				@include("front.menu.menu-log-user")
-			@else
+			@if(Auth::guest())
 				@include("front.menu.menu-guest")
+			@else
+				@include("front.menu.menu-log-user")
 			@endif
 
 		</div>
