@@ -5,13 +5,13 @@
     <div class="row">
         <div class="col-md-8 col-md-offset-2">
             <div class="panel panel-default">
-                <div class="panel-heading">Register</div>
+                <div class="panel-heading">Registrate</div>
                 <div class="panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('register') }}">
                         {{ csrf_field() }}
 
                         <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                            <label for="name" class="col-md-4 control-label">Name</label>
+                            <label for="name" class="col-md-4 control-label">Nombre</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control" name="name" value="{{ old('name') }}" required autofocus>
@@ -25,7 +25,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('surname') ? ' has-error' : '' }}">
-                            <label for="surname" class="col-md-4 control-label">Surname</label>
+                            <label for="surname" class="col-md-4 control-label">Apellido</label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control" name="surname" value="{{ old('surname') }}" required autofocus>
@@ -53,7 +53,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                            <label for="email" class="col-md-4 control-label">Dirección de E-Mail</label>
 
                             <div class="col-md-6">
                                 <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
@@ -67,7 +67,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('birth_date') ? ' has-error' : '' }}">
-                            <label for="birth_date" class="col-md-4 control-label">Birth Date</label>
+                            <label for="birth_date" class="col-md-4 control-label">Fecha de nacimiento</label>
 
                             <div class="col-md-6">
                                 <input id="birth_date" type="date" class="form-control" name="birth_date" value="{{ old('birth_date') }}" required autofocus>
@@ -81,7 +81,7 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
-                            <label for="password" class="col-md-4 control-label">Password</label>
+                            <label for="password" class="col-md-4 control-label">Contraseña</label>
 
                             <div class="col-md-6">
                                 <input id="password" type="password" class="form-control" name="password" required>
@@ -95,7 +95,7 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="password-confirm" class="col-md-4 control-label">Confirm Password</label>
+                            <label for="password-confirm" class="col-md-4 control-label">Confirmar contraseña</label>
 
                             <div class="col-md-6">
                                 <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required>
@@ -103,16 +103,16 @@
                         </div>
 
                         <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
-                            <label for="gender" class="col-md-4 control-label">Gender</label>
+                            <label for="gender" class="col-md-4 control-label">Género</label>
                             <div class="col-md-8">
                                 <label class="checkbox-inline">
-                                    <input type="radio" name="gender" value="{{ old('gender') }}" required> Male
+                                    <input type="radio" name="gender" value="{{ old('gender') }}" required> Hombre
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="radio" name="gender" value="{{ old('gender') }}" required> Female
+                                    <input type="radio" name="gender" value="{{ old('gender') }}" required> Mujer
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="radio" name="gender" value="{{ old('gender') }}" required> Prefer not say it
+                                    <input type="radio" name="gender" value="{{ old('gender') }}" required> Prefiero no decirlo
                                 </label>
                             </div>
                         </div>
@@ -130,7 +130,7 @@
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
-                                    Register
+                                    Registrar
                                 </button>
                             </div>
                         </div>
