@@ -124,7 +124,7 @@
                                 </span>
                             @endif
                         </div>
-                        </div>
+
 
                         <br>
                         <div class="form-group">
