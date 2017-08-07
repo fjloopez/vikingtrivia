@@ -11,4 +11,10 @@ class Answer extends Model
     	return $this->belongsTo('App\Question');
     }
 
+
+    public function getAnswers ($id){
+
+        return $this::where('question_id', '=', $id);
+    }
+
 }

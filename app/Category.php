@@ -16,5 +16,11 @@ class Category extends Model
         return $this->hasMany('App\Question');
     }
 
+    public function getCategoryImage($id){
+
+        $category = $this::find($id);
+        return $category->category_img;
+    }
+
 
 }

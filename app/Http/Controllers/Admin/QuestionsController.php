@@ -2,9 +2,8 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Answer;
 use App\Http\Controllers\Controller;
-use App\Http\Controllers\Admin\CategoryController;
-use App\Http\Controllers\Admin\AnswerController;
 use App\Question;
 
 class QuestionsController extends Controller
@@ -36,35 +35,9 @@ class QuestionsController extends Controller
 
     public function showById($id)
     {
-        $quesition = Question::find($id);
-        return view('admin.questions.show', compact('question'));
-    }
-
-
-    public function getQuestion(){
-
-        return $this->getQuestionById(null);
-    }
-
-
-    public function getQuestionById ($id){
-
-        if ($id === null){
-            $id = rand(1,5);
-            $question = Question::find($id);
-        } else {
-            $question = Question::where('freeze_timer IS NOT NULL')->limit(1);
-        }
-        $answer = getAnswers($question->id);
-
-        $categoryImage = getCategoryImage($question->category_id);
-
-        $scenario = [
-            'question' => $question,
-            'answer' => $answer,
-            'categoryImage' => $categoryImage
-        ];
-        return $scenario;
+        $question = Question::find($id);
+        $answers = Answer::where('question_id', $id)->get();
+        return view('admin.questions.question', ["question" => $question, "answers" => $answers]);
     }
 
 }

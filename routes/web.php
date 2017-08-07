@@ -20,8 +20,10 @@ Route::get('/', function () {
 ========ADMIN========
 =====================*/
 
-Route::get('admin/preguntas', 'Admin\QuestionsController@index' );
-Route::get('admin/categoria', 'Admin\CategoryController@show');
+Route::get('admin/preguntas', 'admin\QuestionsController@index' );
+Route::get('admin/pregunta/{id}', 'admin\QuestionsController@showById' );
+Route::get('admin/categoria', 'admin\CategoryController@show');
+
 
 
 
@@ -43,6 +45,8 @@ Route::get('vikingtrivia/profile', 'ProfileController@profile');
 
 Route::get('vikingtrivia/play', 'GameController@show');
 
+Route::get('vikingtrivia/game-over', 'GameController@show');
+
 
 
 
@@ -50,7 +54,7 @@ Route::get('vikingtrivia/play', 'GameController@show');
 ========JS========
 =====================*/
 Route::get('set-theme', 'ThemeController@setTheme');
-Route::get('count-users', 'UserController@setTheme');
+Route::get('count-users', 'UserController@countUsers');
 
 
 
