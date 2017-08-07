@@ -32,7 +32,7 @@
 
                     <!-- Branding Image -->
                     <a class="navbar-brand" href="{{ url('/vikingtrivia') }}">
-                        {{ config('vikingtrivia', 'Inicio') }}
+                        {{ config('vikingtrivia', 'Viking Trivia') }}
                     </a>
                 </div>
 
