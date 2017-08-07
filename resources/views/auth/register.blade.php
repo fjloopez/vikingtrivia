@@ -24,6 +24,20 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('surname') ? ' has-error' : '' }}">
+                            <label for="surname" class="col-md-4 control-label">Surname</label>
+
+                            <div class="col-md-6">
+                                <input id="name" type="text" class="form-control" name="surname" value="{{ old('surname') }}" required autofocus>
+
+                                @if ($errors->has('surname'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('surname') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
                         <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <label for="email" class="col-md-4 control-label">E-Mail Address</label>
 
@@ -33,6 +47,20 @@
                                 @if ($errors->has('email'))
                                     <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
+
+                        <div class="form-group{{ $errors->has('birth_date') ? ' has-error' : '' }}">
+                            <label for="birth_date" class="col-md-4 control-label">Birth Date</label>
+
+                            <div class="col-md-6">
+                                <input id="birth_date" type="date" class="form-control" name="birth_date" value="{{ old('birth_date') }}" required autofocus>
+
+                                @if ($errors->has('birth_date'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('birth_date') }}</strong>
                                     </span>
                                 @endif
                             </div>
@@ -60,6 +88,34 @@
                             </div>
                         </div>
 
+                        <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
+                            <label for="gender" class="col-md-4 control-label">Gender</label>
+
+                        <div class="form-group{{ $errors->has('gender') ? ' has-error' : '' }}">
+                            <label for="gender" class="">Male</label>
+                            <input id="gender" type="radio" class="" name="gender" value="{{ old('gender') }}" required autofocus>
+                            <br>
+
+                        <div class="{{ $errors->has('gender') ? ' has-error' : '' }}">
+                        <label for="gender" class="">Female</label>
+                        <input id="gender" type="radio" class="" name="gender" value="{{ old('gender') }}" required autofocus>
+                        <br>
+
+                        <div class="{{ $errors->has('gender') ? ' has-error' : '' }}">
+                        <label for="gender" class="">Prefer not say it</label>
+                        <input id="gender" type="radio" class="" name="gender" value="{{ old('gender') }}" required autofocus>
+                        <br>
+
+                        <div class="{{ $errors->has('gender') ? ' has-error' : '' }}">
+                            @if ($errors->has('gender'))
+                                <span class="help-block">
+                                 <strong>{{ $errors->first('gender') }}</strong>
+                                </span>
+                            @endif
+                        </div>
+                        </div>
+
+                        <br>
                         <div class="form-group">
                             <div class="col-md-6 col-md-offset-4">
                                 <button type="submit" class="btn btn-primary">
