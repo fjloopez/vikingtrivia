@@ -9,6 +9,6 @@ class Answer extends Model
 	public function questions()
     {
     	return $this->belongsTo('App\Question');
-
+    }
 
 }
