@@ -2,16 +2,14 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use App\User;
+
 
 class UserController extends Controller
 {
     public function countUsers()
     {
-        $q = intval($_GET['q']);
-        $count = MySQLDB::countUsers(Usuario::$table,Usuario::class);
-
-        echo $count;
+        return User::count();
     }
 
 

@@ -31,4 +31,30 @@ class Question extends Model
         return $this->id;
     }
 
+
+    public function getQuestion(){
+
+        return $this->getQuestionById(null);
+    }
+
+    public function getQuestionById ($id){
+
+        if ($id === null){
+            $id = rand(1,5);
+            $question = Question::find($id);
+        } else {
+            $question = Question::where('freeze_timer IS NOT NULL')->limit(1);
+        }
+        $answer = Answer::getAnswers($question->id);
+
+        $categoryImage = Category::getCategoryImage($question->category_id);
+
+        $scenario = [
+            'question' => $question,
+            'answer' => $answer,
+            'categoryImage' => $categoryImage
+        ];
+        return $scenario;
+    }
+
 }

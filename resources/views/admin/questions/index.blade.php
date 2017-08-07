@@ -21,8 +21,7 @@
     <tbody>
     @foreach($questions as $question)
         <tr>
-            <td>{{ $question->description}}</td>
-            <td><a href="/admin/questions/{{$question->id}}/edit">Editar</a></td>
+            <td><a href="/admin/pregunta/{{$question->id}}">{{ $question->text}}</a></td>
         </tr>
     @endforeach
     </tbody>
