@@ -64,7 +64,7 @@ Route::get('vikingtrivia/contactanos', 'ContactController@show');
 
 Route::get('vikingtrivia/questions/{user_id}', 'Admin\QuestionsController@showByUser');
 
-Route::get('vikingtrivia/addQuestion/{user_id}', 'Admin\QuestionsController@create');
+Route::get('vikingtrivia/addQuestion/{user_id}', 'Admin\QuestionsController@createByUser');
 
 Route::post('vikingtrivia/pregunta/guardar','Admin\QuestionsController@storeByUser');
 

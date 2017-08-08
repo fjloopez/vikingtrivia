@@ -172,4 +172,10 @@ class QuestionsController extends Controller
         return view('admin.questions.question', ["question" => $question, "answers" => $answers]);
     }
 
+    public function createByUser()
+    {
+        $categories = Category::all();
+        return view('front.questions.create', ["categories" => $categories]);
+    }
+
 }

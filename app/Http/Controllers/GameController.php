@@ -2,15 +2,15 @@
 
 namespace App\Http\Controllers;
 
+use App\Category;
 use App\Question;
+use App\Answer;
 
 class GameController extends Controller
 {
     private $totalLifes = 3;
 
     public function show(){
-
-
         //Inicializo las variables de session en caso que no lo estén
         if ( !$this->session()->has("playing") ) {
             $status = [
@@ -32,31 +32,21 @@ class GameController extends Controller
         $question = Question::getQuestion($preguntasPrevias);
 
         // Para que no rompa por no tener cargadas muchas preguntas en la BD
-        if (!$question) return "No hay más preguntas";
+        if (!$question) return view ("/vikingtrivia");
 
 
         //Guardo el id de la pregunta en la variable de session 'preguntasPrevias' para no repetirla en el futuro
         session()->push('preguntasPrevias', $question->id);
 
+        //Traigo las respuestas
+        $answers = Answer::getAnswers($question->id);
+
+        //Traigo la imagen de la categoria correspondiente
+        $categoryImg = Category::getCategoryImage($question->category_id);
+
 
         //Devuelvo la vista con la pregunta elegida
-        return view("front.game.index", compact('question'));
+        return view("front.game.index", ["question" => $question, "answers" => $answers, "categoryImg" => $categoryImg]);
 
-//        $scenario = Question::getQuestion();
-//        return view("front.game.index", [
-//            "question" => $scenario["question"],
-//            "answer" => $scenario["answer"],
-//            "categoryImage" => $scenario["categoryImage"]
-//        ]);
-//
-//     (session(playing)->status['errors'] < $totalLifes)
-//        $scenario = Question::getQuestion();
-//        return view("front.game.index", [
-//            "question" => $scenario["question"],
-//            "answer" => $scenario["answer"],
-//            "categoryImage" => $scenario["categoryImage"]
-//        ]);
-//
-//        return view("front.game.game-over");
     }
 }

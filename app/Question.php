@@ -32,29 +32,9 @@ class Question extends Model
     }
 
 
-    public function getQuestion(){
-
-        return $this->getQuestionById(null);
-    }
-
-    public function getQuestionById ($id){
-
-        if ($id === null){
-            $id = rand(1,5);
-            $question = Question::find($id);
-        } else {
-            $question = Question::where('freeze_timer IS NOT NULL')->limit(1);
-        }
-        $answer = Answer::getAnswers($question->id);
-
-        $categoryImage = Category::getCategoryImage($question->category_id);
-
-        $scenario = [
-            'question' => $question,
-            'answer' => $answer,
-            'categoryImage' => $categoryImage
-        ];
-        return $scenario;
+    public static function getQuestion($preguntasPrevias)
+    {
+        return self::whereNotIn('id', $preguntasPrevias)->inRandomOrder()->first();
     }
 
 }
