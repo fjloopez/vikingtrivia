@@ -20,8 +20,9 @@ Route::get('/', function () {
 ========ADMIN========
 =====================*/
 
-Route::get('admin/preguntas', 'admin\QuestionsController@index' );
-Route::get('admin/pregunta/{id}', 'admin\QuestionsController@showById' );
+Route::get('admin/preguntas', 'admin\QuestionsController@index');
+Route::get('admin/pregunta/{id}', 'admin\QuestionsController@showById');
+Route::get('admin/pregunta/editar/{id}', 'admin\QuestionsController@edit');
 Route::get('admin/categoria', 'admin\CategoryController@show');
 
 
@@ -47,7 +48,11 @@ Route::get('vikingtrivia/play', 'GameController@show');
 
 Route::get('vikingtrivia/game-over', 'GameController@show');
 
+Route::get('vikingtrivia/faqs', 'FaqsController@show');
 
+Route::get('vikingtrivia/politicas-de-privacidad', 'PolicyController@show');
+
+Route::get('vikingtrivia/contactanos', 'ContactController@show');
 
 
 /*===================

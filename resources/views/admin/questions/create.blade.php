@@ -5,13 +5,14 @@
 	<title>Crear Administrador</title>
 </head>
 <body>
-@if(count($errors))
-        <div class="alert alert-danger">
-            @foreach($errors->all() as $error)
-                <p>{{ $error }}</p>
-            @endforeach
-        </div>
-    @endif
+	@if(count($errors))
+			<div class="alert alert-danger">
+				@foreach($errors->all() as $error)
+					<p>{{ $error }}</p>
+				@endforeach
+			</div>
+	@endif
+	<h1>Crear pregunta y sus respuestas</h1>
     <div>
     <form action="" method="post" enctype="multipart/form-data">
     	{{ csrf_field() }}

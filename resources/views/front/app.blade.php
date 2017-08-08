@@ -29,8 +29,6 @@
 
             @yield('content')
 
-            @include("front.partials.slider")
-
             @include("front.partials.footer")
 
             @include("front.partials.scripts")

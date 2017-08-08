@@ -19,6 +19,6 @@
             <li>{{ $answer->text }}</li>
         @endforeach
     </ul>
-    <button class=""><a class="" href=""> Editar </a></button>
+    <button class=""><a class="" href="/admin/pregunta/editar/{{ $question->id }}"> Editar </a></button>
 </body>
 </html>

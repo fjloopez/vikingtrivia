@@ -16,4 +16,8 @@
         </div> <!-- cierra container imagen -->
 
     </div><!-- cierra container play -->
+
+
+    @include("front.partials.slider")
+
 @endsection
