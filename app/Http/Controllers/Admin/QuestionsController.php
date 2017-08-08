@@ -8,6 +8,9 @@ use App\Question;
 
 class QuestionsController extends Controller
 {
+
+    protected $redirectTo = '/admin/preguntas';
+
     public function __construct()
     {
         $this->middleware('auth');
@@ -46,22 +49,22 @@ class QuestionsController extends Controller
     public function update(){
 
         $question = Question::find(session("questionId"));
-        dd(session());
-        $question->text = session("question");
+//        dd(session());
+        $question->text = request("question");
 
         $answers = Answer::where("question_id", session("questionId"))->get();
 
-        $answers[0]->text = session("answer0");
-        $answers[1]->text = session("answer1");
-        $answers[2]->text = session("answer2");
-        $answers[3]->text = session("answer3");
+        $answers[0]->text = request("answer0");
+        $answers[1]->text = request("answer1");
+        $answers[2]->text = request("answer2");
+        $answers[3]->text = request("answer3");
 
         $question->save();
         foreach ($answers as $answer){
             $answer->save();
         }
 
-        redirect("admin.questions.index");
+        return redirect("/admin/preguntas");
     }
 
     public function showById($id)
