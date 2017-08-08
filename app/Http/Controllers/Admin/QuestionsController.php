@@ -66,11 +66,11 @@ class QuestionsController extends Controller
         $answer3->question_id = $question->id;
 
         $correctAnswer = request("correct");
-        if ($correctAnswer === 0){
+        if ($correctAnswer == 0){
             $answer0->correct = 1;
-        } elseif ($correctAnswer ===1){
+        } elseif ($correctAnswer ==1){
             $answer1->correct = 1;
-        } elseif ($correctAnswer === 2){
+        } elseif ($correctAnswer == 2){
             $answer2->correct = 1;
         } else{
             $answer3->correct = 1;
@@ -124,11 +124,11 @@ class QuestionsController extends Controller
         $answer3->question_id = $question->id;
 
         $correctAnswer = request("correct");
-        if ($correctAnswer === 0){
+        if ($correctAnswer == 0){
             $answer0->correct = 1;
-        } elseif ($correctAnswer ===1){
+        } elseif ($correctAnswer ==1){
             $answer1->correct = 1;
-        } elseif ($correctAnswer === 2){
+        } elseif ($correctAnswer == 2){
             $answer2->correct = 1;
         } else{
             $answer3->correct = 1;
