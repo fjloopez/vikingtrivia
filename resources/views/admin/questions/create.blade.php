@@ -20,10 +20,10 @@
 		<input type="text" name="question" placeholder= "Pregunta" value="" required id="pregunta">
 		<br>
 		<label for="respuesta">Respuestas</label>
-		<input type="text" name="answer" placeholder="Respuesta1" value="" required>
-		<input type="text" name="answer" placeholder="Respuesta2" value="" required>
-		<input type="text" name="answer" placeholder="Respuesta3" value="" required>
-		<input type="text" name="answer" placeholder="Respuesta4" value="" required>
+		<input type="text" name="answer0" placeholder="Respuesta1" value="" required>
+		<input type="text" name="answer1" placeholder="Respuesta2" value="" required>
+		<input type="text" name="answer2" placeholder="Respuesta3" value="" required>
+		<input type="text" name="answer3" placeholder="Respuesta4" value="" required>
 		
 		<button id="submit" class="buttonRegistro" align="center" type="submit">Enviar</button>
 		<button class="buttonRegistro" type="reset">Borrar</button>

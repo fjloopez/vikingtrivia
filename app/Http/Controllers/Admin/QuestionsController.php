@@ -30,25 +30,26 @@ class QuestionsController extends Controller
         return view('admin.questions.edit', ["question" => $question, "answers" => $answers]);
     }
 
-    public function store()
+    public function store(Request $request)
     {
     	//crear la pregunta
     	$question = Question::create(request()->all());
-
     	$answer = Answer::create(request()->all());
-        $answer->save();
+
     	//guardar la pregunta
     	$question->save();
+        //guardar las respuestas
+        $answer->save();
     }
 
 
     public function update(){
 
         $question = Question::find(session("questionId"));
+        dd(session());
         $question->text = session("question");
 
         $answers = Answer::where("question_id", session("questionId"))->get();
-
 
         $answers[0]->text = session("answer0");
         $answers[1]->text = session("answer1");

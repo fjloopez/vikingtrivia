@@ -5,17 +5,17 @@
     <title>Editar Administrador</title>
 </head>
 <body>
-@if(count($errors))
-    <div class="alert alert-danger">
-        @foreach($errors->all() as $error)
-            <p>{{ $error }}</p>
-        @endforeach
-    </div>
-@endif
-<div>
-    <h1>Editar Pregunta y respuestas</h1>
-    <form action="/admin/actualizar" method="post" enctype="multipart/form-data">
-        {{ csrf_field() }}
+    @if(count($errors))
+        <div class="alert alert-danger">
+            @foreach($errors->all() as $error)
+                <p>{{ $error }}</p>
+            @endforeach
+        </div>
+    @endif
+    <div>
+        <h1>Editar Pregunta y respuestas</h1>
+        <form action="/admin/actualizar" method="post" enctype="multipart/form-data">
+            {{ csrf_field() }}
         <label for="pregunta">Pregunta</label>
         <input type="text" name="question" placeholder= "Pregunta" value="{{ $question->text }}" required id="pregunta">
         <br>
