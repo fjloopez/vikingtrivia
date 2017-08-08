@@ -46,11 +46,9 @@ class GameController extends Controller
         //Traigo las respuestas
         $answers = Answer::where('question_id', $question->id)->get();
 
-        //Traigo la imagen de la categoria correspondiente
-        $category = Category::where('id', $question->category_id)->get()->toArray();
 
         //Devuelvo la vista con la pregunta elegida
-        return view("front.game.index", ["question" => $question, "answers" => $answers, "category" => $category]);
+        return view("front.game.index", ["question" => $question, "answers" => $answers]);
     }
 
     public function guess()
