@@ -126,12 +126,24 @@ class QuestionsController extends Controller
         $correctAnswer = request("correct");
         if ($correctAnswer == 0){
             $answer0->correct = 1;
+            $answer1->correct = 0;
+            $answer2->correct = 0;
+            $answer3->correct = 0;
         } elseif ($correctAnswer ==1){
             $answer1->correct = 1;
+            $answer0->correct = 0;
+            $answer2->correct = 0;
+            $answer3->correct = 0;
         } elseif ($correctAnswer == 2){
             $answer2->correct = 1;
+            $answer1->correct = 0;
+            $answer0->correct = 0;
+            $answer3->correct = 0;
         } else{
             $answer3->correct = 1;
+            $answer1->correct = 0;
+            $answer2->correct = 0;
+            $answer0->correct = 0;
         }
 
         //guardar las respuestas

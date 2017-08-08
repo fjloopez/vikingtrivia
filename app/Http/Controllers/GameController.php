@@ -58,6 +58,8 @@ class GameController extends Controller
         //Recupero el estado actual de la partida desde session
         $status = session('playing');
 
+        request("q");
+
         //En función de lo que el usuario elegió, traigo la respuesta
         $answer = Answer::find(request('answer'));
 
@@ -84,8 +86,6 @@ class GameController extends Controller
                 'corrects' => $status['corrects'],
             ]
         ]);
-
-        //Devuelvo la respuesta, será el js, en función de lo que recibe como respuesta, el encargado de mostrar al usuario alguna de las siguientes posibilidades: 1 - La respuesta fue correcta, 2 - La respuesta fue incorrecta - 2a: Tenés N vidas para seguir jugando - 2b: gameover
-        return $response;
+        return redirect("/vikingtrivia/play");
     }
 }

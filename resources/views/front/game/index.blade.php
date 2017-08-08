@@ -10,9 +10,13 @@
 		<div class="question_container">
 			<ul>
 				@foreach($answers as $answer)
-					<li class="play_li"><button><a class="play_a_laravel" href="front.game.result">{{ $answer->text }}</a></button></li>
+					<li class="play_li"><button><a class="play_a_laravel" href="">{{ $answer->text }}</a></button></li>
 				@endforeach
 			</ul>
 		</div>
 	</div>
+@endsection
+
+@section('script')
+	<script type="text/javascript" src="/js/game.js"></script>
 @endsection

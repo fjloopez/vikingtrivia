@@ -66,7 +66,7 @@ Route::get('vikingtrivia/questions/{user_id}', 'Admin\QuestionsController@showBy
 
 Route::get('vikingtrivia/addQuestion/{user_id}', 'Admin\QuestionsController@createByUser');
 
-Route::post('vikingtrivia/pregunta/guardar','Admin\QuestionsController@storeByUser');
+Route::post('vikingtrivia/pregunta/guardar/{id}','Admin\QuestionsController@storeByUser');
 
 
 /*===================
@@ -74,6 +74,7 @@ Route::post('vikingtrivia/pregunta/guardar','Admin\QuestionsController@storeByUs
 =====================*/
 Route::get('set-theme', 'ThemeController@setTheme');
 Route::get('count-users', 'UserController@countUsers');
+Route::get('game', 'GameController@guess');
 
 
 

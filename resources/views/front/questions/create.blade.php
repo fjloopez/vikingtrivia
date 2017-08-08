@@ -13,7 +13,7 @@
         @endif
         <h1>Crear preguntas y sus respuestas</h1>
         <div>
-            <form action="/vikingtrivia/pregunta/guardar" method="post" enctype="multipart/form-data">
+            <form action="/vikingtrivia/pregunta/guardar/{{ Auth::user()->id }}" method="post" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <label for="pregunta">Pregunta</label>
                 <br>
