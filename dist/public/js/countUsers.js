@@ -18,7 +18,7 @@ function countUsers() {
             document.getElementById("userCount").innerHTML = this.responseText;
         }
     };
-    xmlhttp.open("GET", "count-users", true);
+    xmlhttp.open("GET", "/count-users", true);
     xmlhttp.send();
 }
 //# sourceMappingURL=countUsers.js.map

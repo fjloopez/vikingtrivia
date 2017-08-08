@@ -34,6 +34,7 @@ class Question extends Model
 
     public static function getQuestion($preguntasPrevias)
     {
+//        dd(self::whereNotIn('id', $preguntasPrevias)->inRandomOrder()->first());
         return self::whereNotIn('id', $preguntasPrevias)->inRandomOrder()->first();
     }
 
