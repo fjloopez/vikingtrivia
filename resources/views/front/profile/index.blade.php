@@ -7,43 +7,25 @@
 	<div class="container_register"> <!-- abre container register -->
 
 		<h1 class="profile">Perfil</h1>
-
-		<form action="controllers/register.controller.php" method="post">
-
-			<label for="username"> Nombre de Usuario </label>
-			<br>
-			<input type="text" name="username" placeholder="Usuario" value="<?php echo $usernameValue; ?>" required id="username">
-			<br>
-			<label for="password"> Creá tu Contraseña </label>
-			<br>
-			<input type="password" name="password" placeholder="Contraseña" required id="password">
-			<br>
-
-			<label for="checkpassword"> Confirmá Contraseña </label>
-			<br>
-
-			<input type="password" name="checkpassword" placeholder="Confirmar Contraseña" required id="checkpassword">
-			<br>
-
-			<div class="containerAvatar">
-				<label for="avatar">Avatar</label>
-				<input type="file" name="avatar">
-			</div>
-
-			<button class="buttonRegistro" align="center" type="submit">Guardar</button>
-			<button class="buttonRegistro" type="reset">Borrar</button>
-
-		</form>
+		<ul>
+			<li>{{ Auth::user()->name }}</li>
+			<li>{{ Auth::user()->surname }}</li>
+			<li>{{ Auth::user()->username }}</li>
+			<li>{{ Auth::user()->email }}</li>
+			<li>{{ Auth::user()->birth_date }}</li>
+			<li>{{ Auth::user()->gender }}</li>
+		</ul>
 
 	</div><!-- cierra container register -->
 
-
-
+	<div class="row">
+		<button type="button"> <a href="" class="play_button_link">Editar</a></button>
+	</div>
 
 	<div class="container_img_login"> <!-- abre container imagen -->
 		<article>
 			<section>
-				<img class="img_character" src="..\img\Personajes.png" alt="Main character">
+				<img class="img_character" src="/images/Personajes.png" alt="Main character">
 			</section>
 		</article>
 	</div><!-- cierra container imagen -->

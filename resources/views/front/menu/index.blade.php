@@ -10,7 +10,7 @@
 			<div class="container_user">
 				<a href="#"><img class="user_img" src="{{ asset('/images/avatars/defaultAvatar.png') }}" alt="Avatar del usuario"></a> <!-- profile.php -->
 					<div class="showUsername">
-						<label><h4 class="usernameText">USUARIO</h4></label>
+						<label><h4 class="usernameText">{{ Auth::user()->username }}</h4></label>
 					</div>
 			</div>
 		@endif

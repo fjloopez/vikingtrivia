@@ -7,6 +7,6 @@ use Illuminate\Http\Request;
 class ProfileController extends Controller
 {
     public function profile(){
-    	//hay q esperar al mostrelius Franulius	
+    	return view("front.profile.index");
     }
 }

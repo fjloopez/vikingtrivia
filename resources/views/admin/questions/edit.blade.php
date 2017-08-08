@@ -14,7 +14,7 @@
 @endif
 <div>
     <h1>Editar Pregunta y respuestas</h1>
-    <form action="" method="post" enctype="multipart/form-data">
+    <form action="/admin/actualizar" method="post" enctype="multipart/form-data">
         {{ csrf_field() }}
         <label for="pregunta">Pregunta</label>
         <input type="text" name="question" placeholder= "Pregunta" value="{{ $question->text }}" required id="pregunta">
