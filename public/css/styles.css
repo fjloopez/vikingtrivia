@@ -576,6 +576,10 @@ Mobile
     display: none;
   }
 
+  .container_menu h4{
+    height: 2vw;
+  }
+
   .container_desplegable div:target {
     display: block;
   }
