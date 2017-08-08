@@ -186,12 +186,17 @@ Imagen personaje
   text-align: justify;
   float: right;
   height: 5vw;
-  width: 13vw;
+  width: 100%;
 }
 
 .usernameText{
+  color: white;
   text-align: justify;
-  font-size: 1.5vw;
+  font-size: 2.3vw;
+  width: 65%;
+  margin-left: 35%;
+  line-height: 0.8vw;
+
 }
 
 
@@ -548,6 +553,8 @@ Profile
   }
 }
 
+
+
 /*=============================================================
 Mobile
 ==============================================================*/
@@ -571,6 +578,11 @@ Mobile
 
   .container_desplegable div:target {
     display: block;
+  }
+
+  .container_desplegable h4, .container_desplegable li{
+    font-size: 3vw;
+    line-height: 6vw;
   }
 
   .list_menu li a {
@@ -753,4 +765,11 @@ Mobile
     display: none;
   }
 
+  .usernameText{
+  display: none;
+  }
+
+  .showUsername{
+    width: 13vw;
+  }
 }
