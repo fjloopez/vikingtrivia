@@ -17,8 +17,9 @@
 <link href="/css/styles.css" rel="stylesheet" >
 {{--@if (session)--}}
 
-
-@if (session("theme") == 'inside')
+@if (!session()->has("theme"))
+    <link href="/css/stylesInside.css" rel="stylesheet" class="estilos" id="themeInside">
+@elseif (session("theme") == 'inside')
     <link href="/css/stylesInside.css" rel="stylesheet" class="estilos" id="themeInside">
     @else
     <link href="/css/stylesOutside.css" rel="stylesheet" class="estilos" id="themeOutside">
