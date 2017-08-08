@@ -61,7 +61,12 @@ Route::get('vikingtrivia/politicas-de-privacidad', 'PolicyController@show');
 
 Route::get('vikingtrivia/contactanos', 'ContactController@show');
 
-Route::get('vikingtrivia/addQuestion', 'Admin\QuestionController@create');
+
+Route::get('vikingtrivia/questions/{user_id}', 'Admin\QuestionsController@showByUser');
+
+Route::get('vikingtrivia/addQuestion/{user_id}', 'Admin\QuestionsController@create');
+
+Route::post('vikingtrivia/pregunta/guardar','Admin\QuestionsController@storeByUser');
 
 
 /*===================

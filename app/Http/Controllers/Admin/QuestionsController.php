@@ -86,6 +86,64 @@ class QuestionsController extends Controller
     }
 
 
+    public function showByUser($user_id){
+
+        $questions = Question::where("user_id",$user_id)->get();
+        return view("front.questions.index", ["questions" => $questions]);
+    }
+
+
+    public function storeByUser($user_id)
+    {
+        //crear la pregunta
+        $question = new Question;
+
+        $question->text = request("question");
+        $question->category_id = request("category_id");
+
+        $question->user_id = $user_id;
+
+        //guardar la pregunta
+        $question->save();
+
+        //crear las respuestas
+        $answer0 = new Answer;
+        $answer1 = new Answer;
+        $answer2 = new Answer;
+        $answer3 = new Answer;
+
+        //asignar valores a la respuestas
+        $answer0->text = request("answer0");
+        $answer1->text = request("answer1");
+        $answer2->text = request("answer2");
+        $answer3->text = request("answer3");
+
+        $answer0->question_id = $question->id;
+        $answer1->question_id = $question->id;
+        $answer2->question_id = $question->id;
+        $answer3->question_id = $question->id;
+
+        $correctAnswer = request("correct");
+        if ($correctAnswer === 0){
+            $answer0->correct = 1;
+        } elseif ($correctAnswer ===1){
+            $answer1->correct = 1;
+        } elseif ($correctAnswer === 2){
+            $answer2->correct = 1;
+        } else{
+            $answer3->correct = 1;
+        }
+
+        //guardar las respuestas
+        $answer0->save();
+        $answer1->save();
+        $answer2->save();
+        $answer3->save();
+
+        return redirect("/vikingtrivia");
+    }
+
+
     public function update(){
 
         $question = Question::find(session("questionId"));
