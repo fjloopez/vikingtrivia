@@ -555,6 +555,15 @@ Profile
   font-size: 2vw;
 }
 
+.play_li{
+  list-style: none;
+  width: 80%;
+}
+
+.play_a_laravel{
+  font-family: "Segoe UI",Arial,sans-serif;
+}
+
 @media only screen and (max-width : 800px) {
   footer{
     display: none;
