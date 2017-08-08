@@ -17,7 +17,7 @@
     <body>
         <div class='container'> <!-- abre container principal-->
             <form>
-                <button id="theme" class="themeButton">THEME</button>
+                <button id="{{ session()->has('theme') ? session('theme') : 'inside' }}" class="themeButton">THEME</button>
             </form>
             <div class="container_logo"> <!-- abre container del logo -->
                 <a href="/vikingtrivia"><img class="img_logo" src="{{ asset("/images/LogoVT.png") }}" alt="Logo del juego"></a>

@@ -18,9 +18,12 @@
 {{--@if (session)--}}
 
 
-{{--@php--}}
-    {{--$class = ($session->has('theme')) ? $session('theme') : 'inside';--}}
-{{--@endphp--}}
-<link href="/css/stylesInside.css" rel="stylesheet" class="estilos" id="themeInside">
-{{--<link href="/css/stylesOutside.css" rel="stylesheet" class="estilos" id="themeOutside">--}}
+@if (session("theme") == 'inside')
+    <link href="/css/stylesInside.css" rel="stylesheet" class="estilos" id="themeInside">
+    @else
+    <link href="/css/stylesOutside.css" rel="stylesheet" class="estilos" id="themeOutside">
+@endif
+
+
+
 

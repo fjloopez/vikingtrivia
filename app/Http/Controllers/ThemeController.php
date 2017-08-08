@@ -13,7 +13,7 @@ class ThemeController extends Controller
             session()->put('theme', 'inside');
         } else {
             $q = "outside";
-            session()->put('theme', 'inside');
+            session()->put('theme', 'outside');
         }
         return $q;
     }
