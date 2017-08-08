@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Editar Administrador</title>
+    <title>Editar Pregunta y sus respuestas</title>
 </head>
 <body>
     @if(count($errors))

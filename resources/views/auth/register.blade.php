@@ -106,13 +106,13 @@
                             <label for="gender" class="col-md-4 control-label">Género</label>
                             <div class="col-md-8">
                                 <label class="checkbox-inline">
-                                    <input type="radio" name="gender" value="{{ old('gender') }}" required> Hombre
+                                    <input type="radio" name="gender" value="male" required> Hombre
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="radio" name="gender" value="{{ old('gender') }}" required> Mujer
+                                    <input type="radio" name="gender" value="female" required> Mujer
                                 </label>
                                 <label class="checkbox-inline">
-                                    <input type="radio" name="gender" value="{{ old('gender') }}" required> Prefiero no decirlo
+                                    <input type="radio" name="gender" value="other" required> Prefiero no decirlo
                                 </label>
                             </div>
                         </div>

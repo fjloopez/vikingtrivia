@@ -28,7 +28,9 @@ Route::get('admin/preguntas/crear','Admin\QuestionsController@create');
 Route::post('admin/preguntas/guardar','Admin\QuestionsController@store');
 
 
-Route::get('admin/categoria', 'Admin\CategoryController@show');
+Route::get('admin/categorias', 'Admin\CategoryController@show');
+Route::get('admin/categoria/{id}', 'Admin\CategoryController@showById');
+Route::get('admin/categoria/editar/{id}', 'Admin\CategoryController@edit');
 
 
 
@@ -58,6 +60,8 @@ Route::get('vikingtrivia/faqs', 'FaqsController@show');
 Route::get('vikingtrivia/politicas-de-privacidad', 'PolicyController@show');
 
 Route::get('vikingtrivia/contactanos', 'ContactController@show');
+
+Route::get('vikingtrivia/addQuestion', 'Admin\QuestionController@create');
 
 
 /*===================
