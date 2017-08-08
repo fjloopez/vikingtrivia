@@ -20,15 +20,15 @@ Route::get('/', function () {
 ========ADMIN========
 =====================*/
 
-Route::get('admin/preguntas', 'admin\QuestionsController@index');
-Route::get('admin/pregunta/{id}', 'admin\QuestionsController@showById');
-Route::get('admin/pregunta/editar/{id}', 'admin\QuestionsController@edit');
-Route::post('admin/preguntas/actualizar', 'admin\QuestionsController@update');
-Route::get('admin/preguntas/crear','admin\QuestionsController@create');
-Route::post('admin/preguntas/guardar','admin\QuestionsController@store');
+Route::get('admin/preguntas', 'Admin\QuestionsController@index');
+Route::get('admin/pregunta/{id}', 'Admin\QuestionsController@showById');
+Route::get('admin/pregunta/editar/{id}', 'Admin\QuestionsController@edit');
+Route::post('admin/preguntas/actualizar', 'Admin\QuestionsController@update');
+Route::get('admin/preguntas/crear','Admin\QuestionsController@create');
+Route::post('admin/preguntas/guardar','Admin\QuestionsController@store');
 
 
-Route::get('admin/categoria', 'admin\CategoryController@show');
+Route::get('admin/categoria', 'Admin\CategoryController@show');
 
 
 
