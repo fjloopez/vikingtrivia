@@ -562,7 +562,8 @@ Profile
 
 .play_a_laravel{
   font-family: "Segoe UI",Arial,sans-serif;
-  font-size: 3vw;
+  font-size: 2vw;
+  text-decoration: none;
 }
 
 @media only screen and (max-width : 800px) {
@@ -794,5 +795,13 @@ Mobile
 
   .showUsername{
     width: 13vw;
+  }
+
+  .play_a_laravel{
+  font-size: 4vw;  
+  }
+
+  .containerRegister h2{
+    line-height: 8vw;
   }
 }
