@@ -562,6 +562,7 @@ Profile
 
 .play_a_laravel{
   font-family: "Segoe UI",Arial,sans-serif;
+  font-size: 3vw;
 }
 
 @media only screen and (max-width : 800px) {
