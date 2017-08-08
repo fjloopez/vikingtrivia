@@ -531,8 +531,16 @@ Profile
 }
 
 .container_register li{
-    line-height: 5vw;
-  }
+  line-height: 5vw;
+  font-size: 2vw;
+  font-family: "Segoe UI",Arial,sans-serif;
+  margin-left: 10%; 
+}
+
+.container_register h1{
+  font-family: Vikingn;
+  font-size: 2vw;
+}
 
 @media only screen and (max-width : 800px) {
   footer{
@@ -690,6 +698,10 @@ Mobile
     width: 100%;
   }
 
+  .container_register h1{
+    font-size: 6vw;
+  }
+
   .container_register, .container_register button, input {
     font-size: 3vw;
 
@@ -725,6 +737,7 @@ Mobile
 
   .container_register li{
     line-height: 10vw;
+    font-size: 6vw;
   }
 
 
