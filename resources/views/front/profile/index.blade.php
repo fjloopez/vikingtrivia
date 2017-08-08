@@ -16,11 +16,15 @@
 			<li>{{ Auth::user()->gender }}</li>
 		</ul>
 
+
+		<div class="row">
+			<button class="profile_button" type="button"> <a href="" class="play_button_link2">Editar</a></button>
+		</div>
+
+
 	</div><!-- cierra container register -->
 
-	<div class="row">
-		<button type="button"> <a href="" class="play_button_link">Editar</a></button>
-	</div>
+	
 
 	<div class="container_img_login"> <!-- abre container imagen -->
 		<article>
