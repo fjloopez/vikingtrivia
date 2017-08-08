@@ -3,7 +3,7 @@
 @section('title', "Contactenos")
 
 
-@section('content)
+@section('content')
 	<div class="container_contact"> <!-- abre container Contacto -->
 
 		<h3>Francisco Jesús Lopez</h3>
