@@ -504,6 +504,12 @@ Register
   padding: 1%;
 }
 
+input[type=radio] {
+    border: 0px;
+    width: 8%;
+    height: 1.5em;
+}
+
 /*====
 Register errors
 ================*/

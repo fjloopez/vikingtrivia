@@ -27,13 +27,13 @@
                 <br>
                 <label for="respuesta">Respuestas (marcar la correcta)</label>
                 <br>
-                <input type="text" name="answer0" placeholder="Respuesta1" value="" required>
+                <input type="text" name="answer0" placeholder="Respuesta 1" value="" required>
                 <input type="radio" name="correct" value="0">
-                <input type="text" name="answer1" placeholder="Respuesta2" value="" required>
+                <input type="text" name="answer1" placeholder="Respuesta 2" value="" required>
                 <input type="radio" name="correct" value="1">
-                <input type="text" name="answer2" placeholder="Respuesta3" value="" required>
+                <input type="text" name="answer2" placeholder="Respuesta 3" value="" required>
                 <input type="radio" name="correct" value="2">
-                <input type="text" name="answer3" placeholder="Respuesta4" value="" required>
+                <input type="text" name="answer3" placeholder="Respuesta 4" value="" required>
                 <input type="radio" name="correct" value="3">
                 <br>
                 <br>
