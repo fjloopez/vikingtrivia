@@ -10,7 +10,11 @@
             <img class="img_character" src="{{asset("/images/Personajes.png")}}" alt="Main character">
 
             <div class="container_play_button"> <!-- abre container del boton jugar -->
-                <button type="button" class="play_button" > <a href="/vikingtrivia/play" class="play_button_link">Play!</a></button>
+                @if (Auth::guest())
+                    <button type="button" class="play_button" > <a href="{{ route('login') }}" class="play_button_link">Play!</a></button>
+                @else
+                    <button type="button" class="play_button" > <a href="/vikingtrivia/play" class="play_button_link">Play!</a></button>
+                @endif
             </div> <!-- cierra container del boton jugar -->
 
         </div> <!-- cierra container imagen -->
