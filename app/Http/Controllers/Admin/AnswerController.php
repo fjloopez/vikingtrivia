@@ -9,11 +9,4 @@ class AnswerController extends Controller
 {
 
 
-
-
-
-
-
-
-
 }

@@ -26,5 +26,6 @@
     @endforeach
     </tbody>
 </table>
+<button class="btn btn-primary"><a href="/admin/preguntas/crear">Crear pregunta y sus respuestas</a></button>
 </body>
 </html>

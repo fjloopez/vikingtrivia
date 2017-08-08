@@ -20,5 +20,6 @@
         @endforeach
     </ul>
     <button class=""><a class="" href="/admin/pregunta/editar/{{ $question->id }}"> Editar </a></button>
+    <button class=""><a class="" href="/admin/preguntas"> Atras </a></button>
 </body>
 </html>

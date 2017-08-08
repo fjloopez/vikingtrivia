@@ -14,16 +14,27 @@
     @endif
     <div>
         <h1>Editar Pregunta y respuestas</h1>
-        <form action="/admin/actualizar" method="post" enctype="multipart/form-data">
+        <form action="/admin/preguntas/actualizar" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
         <label for="pregunta">Pregunta</label>
         <input type="text" name="question" placeholder= "Pregunta" value="{{ $question->text }}" required id="pregunta">
+        <select name="category_id">
+            @foreach($categories as $category)
+                <option value="{{ $category->id }}" @if($category->id === $question->category_id){{ "selected" }}@endif>{{ $category->description }}</option>
+            @endforeach
+        </select>
         <br>
         <label for="respuesta">Respuestas</label>
-        <input type="text" name="answer0" value="{{ $answers["0"]->text }}" required>
-        <input type="text" name="answer1" value="{{ $answers["1"]->text }}" required>
-        <input type="text" name="answer2" value="{{ $answers["2"]->text }}" required>
-        <input type="text" name="answer3" value="{{ $answers["3"]->text }}" required>
+        @php $i = 0; @endphp
+        @foreach($answers as $answer)
+            <input type="text" name="answer. {{ $i }}" value="{{ $answer->text }}" required>
+            <input type="radio" name="correct" value="0" @if($answer->correct === 1 ) {{ "selected" }} @endif>
+        @endforeach
+        {{--<input type="text" name="answer1" value="{{ $answers["1"]->text }}" required>--}}
+        {{--<input type="radio" name="correct" value="0">--}}
+        {{--<input type="text" name="answer2" value="{{ $answers["2"]->text }}" required>--}}
+        {{--<input type="radio" name="correct" value="0">--}}
+        {{--<input type="text" name="answer3" value="{{ $answers["3"]->text }}" required>--}}
         @php
             session(["questionId" => $question->id]);
         @endphp
