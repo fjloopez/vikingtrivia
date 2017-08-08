@@ -1,11 +1,9 @@
 <div class="slider">
     <div id="slider">
         <div class="container_slider">
-            <img class="slider_img" src="http://lorempixel.com/900/600/sports" /><!--
-                --><img class="slider_img" src="http://lorempixel.com/900/600/city" /><!--
-                --><img class="slider_img" src="http://lorempixel.com/900/600/cats" /><!--
-                --><img class="slider_img" src="http://lorempixel.com/900/600/food" /><!--
-                --><img class="slider_img" src="http://lorempixel.com/900/600/people" />
+                <img class="slider_img" src="{{ asset("/images/slider/weapons-example.png") }}" />
+                <img class="slider_img" src="{{ asset("/images/slider/weapons-example-correct.png") }}" />
+                <img class="slider_img" src="{{ asset("/images/slider/example.png") }}" />
         </div>
     </div>
     <div class="container_slider_buttons">
