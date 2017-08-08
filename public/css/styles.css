@@ -490,6 +490,8 @@ Register
 
 .container_register input{
   font-size: 1.4vw;
+  padding-top: 0px;
+  padding-bottom: 0px;
 }
 
 .containerAvatar{
@@ -726,6 +728,7 @@ Mobile
   .container_register {
     width: 100%;
     font-size: 3vw;
+    line-height: 6vw;
   }
 
   .container_register input {
@@ -733,7 +736,7 @@ Mobile
   }
 
   input[type=text], input[type=password], input[type=email], input[type=date], input[type=username] {
-    width: 100%;
+    width: 90%;
 
   }
 
