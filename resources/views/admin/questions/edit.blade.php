@@ -26,7 +26,7 @@
         <br>
         <label for="respuesta">Respuestas</label>
         @for($i=0, $l=count($answers); $i<$l; $i++)
-            <input type="text" name="answer.{{ $i }}" value="{{ $answer[$i]->text }}" required>
+            <input type="text" name="answer.{{ $i }}" value="{{ $answers[$i]->text }}" required>
             <input type="radio" name="correct" value="{{$i}}" @if($answers[$i]->correct === 1) {{ "checked" }} @endif>
         @endfor
         {{--<input type="text" name="answer1" value="{{ $answers["1"]->text }}" required>--}}
