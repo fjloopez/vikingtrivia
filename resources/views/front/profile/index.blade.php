@@ -26,11 +26,5 @@
 
 	
 
-	<div class="container_img_login"> <!-- abre container imagen -->
-		<article>
-			<section>
-				<img class="img_character" src="/images/Personajes.png" alt="Main character">
-			</section>
-		</article>
-	</div><!-- cierra container imagen -->
+	
 @endsection
